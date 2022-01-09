@@ -38,7 +38,7 @@ public class InicializaSiteSaraiva {
 
 
         //driver.findElement(By.cssSelector("#app > div.main > div > div > div > section > div.saraiva-account-user-profile > div > div > section:nth-child(1) > div > div > div > div > div:nth-child(1) > a:nth-child(4)")).click();
-        //driver.quit();
+        driver.quit();
 
     }
 
