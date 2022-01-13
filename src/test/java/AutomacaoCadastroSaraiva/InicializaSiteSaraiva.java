@@ -38,10 +38,6 @@ public class InicializaSiteSaraiva {
         JavascriptExecutor js = (JavascriptExecutor)driver;
         //scrolling  ate certo ponto da pagina
         js.executeScript("window.scrollBy(0,300)","");
-
-
-
-
         driver.findElement(By.cssSelector("a[href='/account#/profile/edit']")).click();
 
         Thread.sleep(2000);
@@ -51,63 +47,42 @@ public class InicializaSiteSaraiva {
         Actions actionProvider = new Actions(driver);
         // Perform double-click action on the element
         actionProvider.doubleClick(selecionafirstname).build().perform();
-
         driver.findElement(By.cssSelector("input[name='firstName']")).sendKeys("Gabriela");
         js.executeScript("window.scrollBy(0,300)","");
-
         // Store campo de sobrenome web element
         WebElement selecionalastname = driver.findElement(By.cssSelector("input[name='lastName']"));
         Actions actionProvider1 = new Actions(driver);
         // Perform double-click action on the element
         actionProvider1.doubleClick(selecionalastname).build().perform();
-
-
         driver.findElement(By.cssSelector("input[name='lastName']")).sendKeys("Lucena");
         //driver.findElement(By.cssSelector("input[name='document']")).sendKeys("000.000.000-00");
-
-        //WebElement yourElement = driver.findElement(By.xpath("xpath locator here"));
-        //Actions action = new Actions(driver);
-        //Actions action1= new Actions(driver);
-        //action1= action.moveToElement(yourElement).doubleClick();
-        //action1.click().build().perform();
-
-
         // Store campo de telefone web element
         WebElement selecionahomePhone = driver.findElement(By.cssSelector("input[name='homePhone']"));
         Actions actionProvider2 = new Actions(driver);
         Actions action1 = new Actions(driver);
-        action1 = actionProvider2.moveToElement(selecionahomePhone).doubleClick();
         // Perform double-click action on the element
+        action1 = actionProvider2.moveToElement(selecionahomePhone).doubleClick();
+        //Perform one more click, as needed
         action1.click().build().perform();
-
         driver.findElement(By.cssSelector("input[name='homePhone']")).sendKeys("8199999999");
         driver.findElement(By.cssSelector("option[value='female']")).click();
-
         // Store campo de nascimento web element
         WebElement selecionabirthDate = driver.findElement(By.cssSelector("input[name='birthDate']"));
         Actions actionProvider3 = new Actions(driver);
         Actions action2 = new Actions(driver);
-        action2 = actionProvider3.moveToElement(selecionahomePhone).doubleClick();
         // Perform double-click action on the element
+        action2 = actionProvider3.moveToElement(selecionahomePhone).doubleClick();
+        // Perform one more click, as needed
         action2.click().build().perform();
-
         driver.findElement(By.cssSelector("input[name='birthDate']")).sendKeys("01011900");
-
         js.executeScript("window.scrollBy(0,300)","");
-
         driver.findElement(By.cssSelector(".flex.items-center.justify-center.h-100.pv2.ph5.w-100.border-box")).click();
-
-
-
-
         driver.quit();
 
     }
 
 
 }
-
-
 
 
 
